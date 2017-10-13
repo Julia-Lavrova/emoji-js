@@ -1,0 +1,83 @@
+{
+  "name": "emoji-js",
+  "description": "Emoji converter to image",
+  "keywords": [
+    "emoji",
+    "smile",
+    "converter"
+  ],
+  "homepage": "https://github.com/Julia-Lavrova/emoji-js",
+  "bugs": "https://github.com/Julia-Lavrova/emoji-js/issues",
+  "version": "1.0.0",
+  "main": "dist/emoji.js",
+  "scripts": {
+    "prebuild": "npm run build:clean",
+    "build": "webpack",
+    "build:clean": "rimraf ./dist",
+    "lint": "eslint --ignore-path .gitignore . --ignore-pattern dist",
+    "lint:staged": "lint-staged",
+    "pretest": "npm run test:clean && npm run lint",
+    "test:clean": "rimraf ./coverage",
+    "test": "jest --coverage",
+    "test:watch": "jest --watchAll",
+    "prepublishOnly": "npm run build",
+    "coveralls": "cat ./coverage/lcov.info | coveralls"
+  },
+  "repository": "git@github.com:Julia-Lavrova/emoji-js.git",
+  "author": "Julia Lavrova <j.v.lavrova@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "lint-staged": {
+    "*.js": "lint"
+  },
+  "pre-commit": "lint:staged",
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": "airbnb-base",
+    "env": {
+      "browser": true,
+      "jest": true,
+      "es6": true
+    },
+    "settings": {
+      "import/resolver": "webpack"
+    }
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/index.js",
+      "!src/**/*.test.{js,jsx}"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "testRegex": "tests/.*\\.test\\.js$"
+  },
+  "devDependencies": {
+    "babel-core": "6.26.0",
+    "babel-eslint": "8.0.0",
+    "babel-loader": "7.1.2",
+    "babel-polyfill": "6.26.0",
+    "babel-preset-env": "1.6.0",
+    "coveralls": "2.13.1",
+    "eslint": "4.7.2",
+    "eslint-config-airbnb-base": "12.0.0",
+    "eslint-import-resolver-webpack": "0.8.3",
+    "eslint-plugin-import": "2.7.0",
+    "faker": "4.1.0",
+    "jest": "21.1.0",
+    "lint-staged": "4.2.3",
+    "pre-commit": "1.2.2",
+    "rimraf": "2.6.2",
+    "webpack": "3.6.0"
+  }
+}
