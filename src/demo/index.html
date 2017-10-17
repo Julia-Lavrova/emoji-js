@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>emoji-js demo</title>
+
+  <style type="text/css">
+    .text {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1><a href="https://github.com/Julia-Lavrova/emoji-js">Demo emoji-js</a></h1>
+
+
+  <div class="text">Here is the usual text:</div>
+  <div>Hello, world! 👋, 🌎!</div>
+
+  <div class="text">Here is parsing text:</div>
+  <div id="prettyText"></div>
+
+  <div class="text">Look in your console!</div>
+  <img src="./demo.png" alt='screenshot' />
+  <script src="https://rawgit.com/Julia-Lavrova/emoji-js/master/dist/emoji.js"></script>
+  <script>
+    const prettyText = parserEmoji.parseEmoji('Hello, world! 👋, 🌎!');
+    document.getElementById('prettyText').innerHTML = prettyText;
+  </script>
+</body>
+
+</html>
