@@ -6,7 +6,7 @@ const config = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'emoji.js',
-    library: 'emoji-img-converter',
+    library: 'parserEmoji',
     libraryTarget: 'umd',
   },
   resolve: {

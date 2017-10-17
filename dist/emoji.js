@@ -4,9 +4,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
 	else if(typeof exports === 'object')
-		exports["emoji-img-converter"] = factory();
+		exports["parserEmoji"] = factory();
 	else
-		root["emoji-img-converter"] = factory();
+		root["parserEmoji"] = factory();
 })(this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
