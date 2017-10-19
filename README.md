@@ -1,7 +1,7 @@
 # emoji-js
 Function for parsing emoji and replacing them with pictures. One type emoji for all devices, without jQuery, pure js. 
 
-[demo](https://julia-lavrova.github.io/emoji-js/index.html)
+[demo](https://julia-lavrova.github.io/emoji-js/demo/index.html)
 
 # Example
 
