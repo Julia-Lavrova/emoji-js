@@ -122,7 +122,7 @@ var parseEmoji = exports.parseEmoji = function parseEmoji(txt) {
   var re = new RegExp('(' + regxArr.join('|') + ')', 'g');
 
   return txt.replace(re, function (match, p1) {
-    return '<img class="emoji" alt="' + p1 + '" src="../apple40/' + toCodePoint(noExtra(p1)) + '.png" />';
+    return '<img class="emoji" alt="' + p1 + '" src="/apple40/' + toCodePoint(noExtra(p1)) + '.png" />';
   });
 };
 
