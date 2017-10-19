@@ -34,5 +34,5 @@ export const parseEmoji = (txt) => {
 
   const re = new RegExp(`(${regxArr.join('|')})`, 'g');
 
-  return txt.replace(re, (match, p1) => `<img class="emoji" alt="${p1}" src="/apple40/${toCodePoint(noExtra(p1))}.png" />`);
+  return txt.replace(re, (match, p1) => `<img class="emoji" alt="${p1}" src="../apple40/${toCodePoint(noExtra(p1))}.png" />`);
 };
