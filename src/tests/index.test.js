@@ -50,10 +50,10 @@ describe('toCodePoint', () => {
 
 describe('parseEmoji', () => {
   it('should return text with img emoji', () => {
-    expect(parseEmoji('test 💕')).toBe('test <img class="emoji" alt="💕" src="/apple40/1f495.png" />');
+    expect(parseEmoji('test 💕')).toBe('test <img class="emoji" alt="💕" src="../apple40/1f495.png" />');
   });
 
   it('should return text with img emoji', () => {
-    expect(parseEmoji('Привет, 👨‍❤️‍💋‍👨')).toBe('Привет, <img class="emoji" alt="👨‍❤️‍💋‍👨" src="/apple40/1f468-2764-1f48b-1f468.png" />');
+    expect(parseEmoji('Привет, 👨‍❤️‍💋‍👨')).toBe('Привет, <img class="emoji" alt="👨‍❤️‍💋‍👨" src="../apple40/1f468-2764-1f48b-1f468.png" />');
   });
 });
