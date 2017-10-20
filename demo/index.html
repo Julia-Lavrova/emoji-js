@@ -13,6 +13,10 @@
       width: 20px;
       height: 20px;
     }
+
+    .copyright {
+      margin: 20px 0;
+    }
   </style>
 </head>
 
@@ -26,12 +30,18 @@
   <div class="text">Here is parsing text:</div>
   <div id="prettyText"></div>
 
-  <div class="text">Look in your console!</div>
+  <div class="text">Look in your console:</div>
+  <br />
   <img src="demo.png" alt='screenshot' />
+
+  <div id="copyright" class="copyright"></div>
+
   <script src="https://rawgit.com/Julia-Lavrova/emoji-js/master/dist/emoji.js"></script>
   <script>
     const prettyText = parserEmoji.parseEmoji('Hello, world! 👋, 🌎!');
+    const copyright = parserEmoji.parseEmoji('Made with ❤︎ by <a href="https://github.com/Julia-Lavrova">Julia</a>.');
     document.getElementById('prettyText').innerHTML = prettyText;
+    document.getElementById('copyright').innerHTML = copyright;
   </script>
 </body>
 
