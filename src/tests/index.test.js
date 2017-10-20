@@ -56,4 +56,12 @@ describe('parseEmoji', () => {
   it('should return text with img emoji', () => {
     expect(parseEmoji('Привет, 👨‍❤️‍💋‍👨')).toBe('Привет, <img class="emoji" alt="👨‍❤️‍💋‍👨" src="../apple40/1f468-2764-1f48b-1f468.png" />');
   });
+
+  it('should return text with img emoji with params', () => {
+    expect(parseEmoji('I ❤ JS', {
+      class: 'smile',
+      alt: false,
+      path: 'img',
+    })).toBe('I <img class="smile" alt="" src="img/apple40/2764.png" /> JS');
+  });
 });
