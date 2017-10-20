@@ -37,6 +37,13 @@ I <img class="smile" alt="" src="img/apple40/2764.png" /> JS
 
 ```
 
+Default params:
+
+```
+class: 'emoji',
+alt: true,
+path: '..',
+``` 
 
 Enjoy it!
 
